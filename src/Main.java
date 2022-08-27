@@ -43,10 +43,7 @@ public class Main {
                     counts[productNum] += productCount;
                 }
 
-            } catch (NumberFormatException exception) {
-                System.out.println("Некорректные данные!");
-                continue;
-            } catch (ArrayIndexOutOfBoundsException exception) {
+            } catch (NumberFormatException | ArrayIndexOutOfBoundsException exception) {
                 System.out.println("Некорректные данные!");
                 continue;
             }
