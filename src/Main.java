@@ -63,17 +63,17 @@ public class Main {
                         isOnSale = true;
                     }
                 }
-                StringBuilder str = new StringBuilder();
+                //StringBuilder str = new StringBuilder();
                 int c = (doBonus ? counts[i] + 1 : counts[i]);
 
                 if (isOnSale && doBonus) {
-                    System.out.println("\t" + products[i] + " " + str.append(c) + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. (распродажа и акция!)");
+                    System.out.println("\t" + products[i] + " " + c + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. (распродажа и акция!)");
                     amount += prices[i] * (counts[i] / 3 * 2 + counts[i] % 3);
                 } else if (isOnSale) {
-                    System.out.println("\t" + products[i] + " " + str.append(c) + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. (распродажа!)");
+                    System.out.println("\t" + products[i] + " " + c + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. (распродажа!)");
                     amount += prices[i] * (counts[i] / 3 * 2 + counts[i] % 3);
                 } else {
-                    System.out.println("\t" + products[i] + " " + str.append(c) + " шт. за " + (prices[i] * counts[i]) + " руб.");
+                    System.out.println("\t" + products[i] + " " + c + " шт. за " + (prices[i] * counts[i]) + " руб.");
                     amount += prices[i] * counts[i];
                 }
             }
